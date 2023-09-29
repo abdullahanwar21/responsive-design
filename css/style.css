@@ -1,0 +1,345 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+/* colors */
+:root {
+  --color1: #444545;
+  --color2: #b5ffe9;
+  --color3: #c5e0d8;
+  --color4: #c9c9c9;
+  --color5: #ceabb1;
+  --color6: #ff1654;
+  --color7: #f3ffbd;
+  --color8: #FFB86F;
+}
+header {
+  background-color: var(--color7);
+}
+nav {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: space-between;
+}
+nav li {
+  flex-basis: 48%;
+  margin-bottom: 0.5rem;
+}
+nav li:first-child {
+  flex-basis: 100%;
+  text-align: center;
+}
+nav li:first-child a {
+  background-color: transparent;
+}
+nav a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: var(--color1);
+  /* color:#50C9CE; */
+  display: block;
+  width: 100%;
+  background-color: var(--color2);
+  padding: 0.5rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+nav a:hover {
+  background-color: var(--color1);
+  color: var(--color4);
+}
+
+/* -----------------Hero Section ------------ */
+section#hero {
+  /* height: 50vh; */
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+#hero img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+  object-position: top;
+}
+/* -----------------Mission Section ------------ */
+#mission {
+  margin-bottom: 3rem;
+}
+.mission-content {
+  display: block;
+  line-height: 1.6;
+  font-size: 1.2rem;
+}
+.mission-image {
+  display: block;
+  max-height: 100px;
+}
+
+/* -----------------Section Popular Prints------------ */
+#pupolar h2 {
+  padding: 0;
+}
+section#pupolar {
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+  background-color: var(--color2);
+  width: 100%;
+  height: auto;
+}
+#pupolar figure img {
+  object-position: 0;
+  /* object-fit: cover; */
+}
+/* ----------------- Section Featured Print  ------------ */
+#featured_print figure img {
+  object-position: 0;
+}
+#featured_print figure {
+  border-color: var(--color6);
+}
+/* -----------------Section Collections------------ */
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+section h2 {
+  font-size: 3rem;
+  margin: 1rem 0px;
+}
+ul {
+  list-style-type: none;
+}
+section ul {
+  margin: 0px;
+  padding: 0px;
+}
+figure {
+  margin: 0 0 0.5rem 0;
+  padding: 0;
+  max-height: 400px;
+  position: relative;
+  border: 10px solid var(--color3);
+  border-radius: 5px;
+  overflow: hidden;
+}
+figure img {
+  margin-bottom: -4px;
+  object-fit: cover;
+  object-position: 0 -150px;
+  width: 100%;
+}
+figcaption {
+  background-color: rgb(255, 255, 255, 0.8);
+  /* opacity: 0.5; */
+  font-size: 2rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+figcaption a {
+  color: var(--color1);
+  padding: 1rem;
+  display: block;
+  text-decoration: none;
+}
+
+/* ---------------- Footer ----------- */
+footer {
+  background-color: var(--color7);
+  padding: 2rem;
+  display: flex;
+  flex-flow: column wrap;
+}
+footer h4 {
+  font-size: 2rem;
+}
+footer ul {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100px;
+  margin: 1.2rem 0px;
+}
+address {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+/* Media QUery For Tablets */
+@media (min-width: 550px) {
+  /* ------------------- Header ----------------- */
+
+  nav ul {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  nav li {
+    flex-basis: auto;
+    margin-bottom: 0px;
+  }
+  nav a {
+    color: #000;
+    background-color: transparent;
+    padding: 10px 20px;
+    border-radius: 20px;
+  }
+  nav a:hover {
+    transition: all ease 0.3s;
+    background-color: var(--color6);
+    color: var(--color2);
+  }
+  /* ------------------- Hero Section ----------------- */
+  #hero {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: var(--color8);
+    padding: 0 3rem;
+    text-align: center;
+  }
+  #hero img {
+    object-fit: contain;
+    height: 100%;
+    max-width: 1200px;
+    object-position: center;
+  }
+  /* -----------------Mission Section ------------ */
+  .mission-content {
+    display: flow-root;
+    max-width: 900px;
+  }
+  .mission-image {
+    float: left;
+    max-height: 212px;
+    shape-outside: polygon(
+      35.84% 94.87%,
+      34.64% 87.05%,
+      51.64% 4.06%,
+      55.1% 0.38%
+    );
+  }
+  /* ------------------- Section Popular Prints ----------------- */
+  #pupolar ul {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  #pupolar ul li:nth-child(1),
+  #pupolar ul li:nth-child(2) {
+    flex-basis: 49.5%;
+  }
+  #pupolar ul li:nth-child(3) {
+    flex-basis: 100%;
+  }
+  /* ------------------- Section Our Featured Prints ----------------- */
+  #featured_print ul {
+    display: flex;
+  }
+  #featured_print ul li {
+    flex-basis: 100%;
+  }
+  /* ------------------- Section Our Mission Prints ----------------- */
+  section ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  section li {
+    flex-basis: 49.5%;
+  }
+  figure img {
+    object-position: 0;
+  }
+  /* -------------------Footer ----------------- */
+  footer {
+    flex-flow: row wrap;
+  }
+  footer .social {
+    flex-basis: 49.5%;
+  }
+  footer address {
+    flex-basis: 49.5%;
+  }
+}
+
+/* Media QUery For Laptops */
+@media (min-width: 800px) {
+  /* -------------------Header ----------------- */
+  nav li:nth-child(2),
+  nav li:nth-child(3) {
+    order: 1;
+  }
+  nav li:nth-child(4),
+  nav li:nth-child(5) {
+    order: 3;
+  }
+  nav li:nth-child(1) {
+    order: 2;
+    flex-basis: auto;
+    margin: 0 auto;
+  }
+  nav ul {
+    justify-content: flex-end;
+  }
+  /* -------------------Section Popular Prints ----------------- */
+  #pupolar h2 {
+    padding: 0px;
+  }
+  #pupolar {
+    padding-bottom: 5rem;
+  }
+  section#pupolar ul {
+    padding: 0 4rem;
+  }
+  section#pupolar {
+    max-width: 100vw;
+  }
+  #pupolar ul li:nth-child(1),
+  #pupolar ul li:nth-child(2),
+  #pupolar ul li:nth-child(3) {
+    flex-basis: 32.5%;
+  }
+  /* -------------------Section featured print  ----------------- */
+  #featured_print figure {
+    max-height: 100vh;
+  }
+  /* -------------------Section Our Mission ----------------- */
+  section h2 {
+    margin-left: 100px;
+    padding: 1rem;
+  }
+  section li {
+    flex-basis: 32.5%;
+  }
+  /* -------------------Footer ----------------- */
+  footer {
+    flex-flow: row wrap;
+  }
+  footer .social {
+    flex-basis: 35%;
+    /* background-color: black; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* align-self: center; */
+  }
+  footer ul li {
+    margin: 0 0.5rem;
+  }
+  footer address {
+    flex-basis: 65%;
+  }
+}
